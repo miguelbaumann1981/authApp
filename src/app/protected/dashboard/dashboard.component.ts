@@ -10,6 +10,11 @@ import { AuthService } from '../../auth/services/auth.service';
       * {
         margin: 15px;
       }
+      button {
+        border: 1px solid orange;
+        background-color: #eee;
+        padding: 10px;
+      }
     `
   ]
 })
@@ -23,6 +28,7 @@ export class DashboardComponent {
 
   logout() {
     this.router.navigateByUrl('/auth/login');
+    this.authService.logout();
   }
 
 }
